@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gulshan's Dev Services</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+    })();
+  </script>
 </head>
 <body>
 
@@ -14,43 +20,19 @@
   </header>
 
   <section class="services">
-    <div class="card">
-      <h3>Software Development</h3>
-      <p>Custom desktop and enterprise software solutions tailored to your needs.</p>
-    </div>
-    <div class="card">
-      <h3>Web Development</h3>
-      <p>Responsive and modern websites built with the latest technologies.</p>
-    </div>
-    <div class="card">
-      <h3>Android App Development</h3>
-      <p>Native and cross-platform apps for businesses and individuals.</p>
-    </div>
-    <div class="card">
-      <h3>School Website Development</h3>
-      <p>Clean, informative, and easy-to-manage websites for schools.</p>
-    </div>
-    <div class="card">
-      <h3>Restaurant E-Menu</h3>
-      <p>Digital menus that improve customer experience and ease management.</p>
-    </div>
-    <div class="card">
-      <h3>Shop Stock Management</h3>
-      <p>Inventory systems that help small and medium businesses stay organized.</p>
-    </div>
-    <div class="card">
-      <h3>Minor & Major Projects with Docs</h3>
-      <p>Fully documented academic and professional project services.</p>
-    </div>
-    <div class="card">
-      <h3>Interview & Career Guidance</h3>
-      <p>Personalized help to get you job-ready in the tech industry.</p>
-    </div>
+    <div class="card"><h3>Software Development</h3><p>Custom desktop and enterprise software solutions tailored to your needs.</p></div>
+    <div class="card"><h3>Web Development</h3><p>Responsive and modern websites built with the latest technologies.</p></div>
+    <div class="card"><h3>Android App Development</h3><p>Native and cross-platform apps for businesses and individuals.</p></div>
+    <div class="card"><h3>School Website Development</h3><p>Clean, informative, and easy-to-manage websites for schools.</p></div>
+    <div class="card"><h3>Restaurant E-Menu</h3><p>Digital menus that improve customer experience and ease management.</p></div>
+    <div class="card"><h3>Shop Stock Management</h3><p>Inventory systems that help small and medium businesses stay organized.</p></div>
+    <div class="card"><h3>Minor & Major Projects with Docs</h3><p>Fully documented academic and professional project services.</p></div>
+    <div class="card"><h3>Interview & Career Guidance</h3><p>Personalized help to get you job-ready in the tech industry.</p></div>
   </section>
 
   <section class="contact-form">
     <h2>Request a Service</h2>
-    <form action="#" method="POST">
+    <form id="contact-form">
       <select name="service" required>
         <option value="">Select a Service</option>
         <option>Software Development</option>
@@ -64,20 +46,20 @@
       <input type="text" name="mobile" placeholder="Mobile Number" required>
       <button type="submit">Submit</button>
     </form>
-    <script>
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  emailjs.sendForm('service_er3p6mp', 'YOUR_TEMPLATE_ID', this)
-    .then(function(response) {
-      alert('Email sent successfully!');
-    }, function(error) {
-      alert('Failed to send email. Please try again.');
-      console.error(error);
-    });
-});
-    </script>
   </section>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_er3p6mp', 'YOUR_TEMPLATE_ID', this)
+        .then(function(response) {
+          alert('Email sent successfully!');
+        }, function(error) {
+          alert('Failed to send email. Please try again.');
+          console.error(error);
+        });
+    });
+  </script>
 
 </body>
 </html>
