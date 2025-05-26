@@ -8,7 +8,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function() {
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+      emailjs.init("vl_0bIyHKKN_2sJba"); // Replace with your actual EmailJS public key
     })();
   </script>
 </head>
@@ -51,7 +51,7 @@
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      emailjs.sendForm('service_er3p6mp', 'YOUR_TEMPLATE_ID', this)
+      emailjs.sendForm('service_8vmkhdn', 'template_ux7i9wh', this)
         .then(function(response) {
           alert('Email sent successfully!');
         }, function(error) {
