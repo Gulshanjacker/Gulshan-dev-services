@@ -64,6 +64,19 @@
       <input type="text" name="mobile" placeholder="Mobile Number" required>
       <button type="submit">Submit</button>
     </form>
+    <script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_er3p6mp', 'YOUR_TEMPLATE_ID', this)
+    .then(function(response) {
+      alert('Email sent successfully!');
+    }, function(error) {
+      alert('Failed to send email. Please try again.');
+      console.error(error);
+    });
+});
+    </script>
   </section>
 
 </body>
