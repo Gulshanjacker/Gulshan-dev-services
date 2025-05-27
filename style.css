@@ -1,82 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #f0f4f8, #fce4ec);
-  color: #2c3e50;
-  padding: 30px;
-  line-height: 1.6;
+  background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  color: #333;
+  padding: 40px 20px;
 }
 
+/* Header */
 header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 header h1 {
   font-size: 3em;
+  color: #1a237e;
   font-weight: 700;
-  color: #2c3e50;
 }
 
 header p {
-  font-size: 1.2em;
+  font-size: 1.25em;
   color: #555;
   margin-top: 10px;
 }
 
+/* Services Section */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
   margin-bottom: 60px;
 }
 
 .card {
-  background: #fff;
-  padding: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #00bcd4;
-  transition: transform 0.3s ease, box-shadow 0.3s;
+  border: 1px solid rgba(200, 200, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
-  color: #00796b;
-  font-size: 1.4em;
   margin-bottom: 12px;
+  font-size: 1.3em;
+  color: #3949ab;
 }
 
 .card p {
-  color: #555;
-  font-size: 1em;
+  color: #424242;
+  line-height: 1.5;
 }
 
+/* Contact Form */
 .contact-form {
-  background: linear-gradient(to bottom right, #ffffff, #ede7f6);
-  padding: 35px;
-  max-width: 650px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  max-width: 600px;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(180, 180, 255, 0.3);
 }
 
 .contact-form h2 {
   text-align: center;
   margin-bottom: 25px;
   color: #6a1b9a;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 .contact-form input,
@@ -86,30 +90,24 @@ header p {
   padding: 14px;
   margin: 12px 0;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1em;
 }
 
-.contact-form input:focus,
-.contact-form select:focus {
-  border-color: #ab47bc;
-  outline: none;
-  box-shadow: 0 0 5px rgba(171, 71, 188, 0.4);
-}
-
 .contact-form select {
-  background: #fdfdfd;
+  background: #fffdfd;
 }
 
 .contact-form button {
-  background: linear-gradient(to right, #8e24aa, #d81b60);
+  background: linear-gradient(to right, #7b1fa2, #d81b60);
   color: white;
-  font-weight: 600;
+  font-weight: bold;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.4s, transform 0.2s;
 }
 
 .contact-form button:hover {
-  background: linear-gradient(to right, #6a1b9a, #c2185b);
+  background: linear-gradient(to right, #4a148c, #ad1457);
+  transform: scale(1.03);
 }
